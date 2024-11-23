@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PyramidPattern
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int spc, len = 1, x;
+            Console.WriteLine("Enter no of rows :");
+            x = int.Parse(Console.ReadLine());
+            spc = x - 1;
+            
+            for(int i=1;i<=x;i++)
+            {
+                for(int j=1;j<=spc;j++)
+                {
+                    Console.Write(" ");
+                }
+                for(int k=1;k<=len;k++)
+                {
+                    Console.Write("*");
+                }
+                spc--;
+                len = len + 2;
+                Console.WriteLine();
+            }
+        }
+    }
+}
